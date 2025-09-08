@@ -1,0 +1,41 @@
+npm install tailwindcss postcss autoprefixer
+
+npm install tailwindcss postcss autoprefixer
+"use client";
+import { useState } from "react";
+import { Mail } from "lucide-react";
+
+export default function Page(){
+  const [email,setEmail]=useState("");
+  const [status,setStatus]=useState<string|null>(null);
+  async function subscribe(e:React.FormEvent){
+    e.preventDefault();
+    setStatus("Loading...");
+    const res=await fetch("/api/subscribe",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email})});
+    const json=await res.json();
+    if(json.ok) setStatus("Thanks for joining!");
+    else setStatus(json.error||"Something went wrong");
+  }
+  return (
+    <main className="min-h-screen">
+      <section className="mx-auto max-w-5xl px-6 py-12">
+        <h1 className="text-4xl font-black">Christebob™</h1>
+        <p className="mt-2 text-neutral-700">Big feelings. Bigger heart. Picture books, shorts, and sounds for brilliant, bendy brains.</p>
+        <div className="mt-6 rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
+          <div className="flex items-start gap-3">
+            <div className="rounded-xl bg-white p-2 shadow-sm"><Mail className="h-5 w-5" /></div>
+            <div className="flex-1">
+              <h2 className="text-lg font-semibold">Get cozy updates</h2>
+              <form onSubmit={subscribe} className="mt-3 flex flex-col gap-3 sm:flex-row">
+                <input className="w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-600/20"
+                  type="email" required placeholder="you@family.com" value={email} onChange={e=>setEmail(e.target.value)} />
+                <button className="rounded-xl bg-brand-600 px-5 py-3 font-semibold text-white hover:bg-brand-700" type="submit">Join free</button>
+              </form>
+              {status && <p className="mt-2 text-sm text-neutral-600">{status}</p>}
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
