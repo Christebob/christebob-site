@@ -25,6 +25,5 @@ export default function Page() {
       </div>
     </main>
   );
-}Claude Code: Start New Chat
-Claude Code: Start New Chat
+  }
 

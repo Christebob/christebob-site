@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.christebob.com/sitemap.xml
+
+# Disallow admin/private areas (none currently)
+# User-agent: *
+# Disallow: /admin/
