@@ -3,10 +3,10 @@ import type { Metadata } from 'next';
 import Header from './components/Header';
 
 export const metadata: Metadata = {
-  title: 'Christebob - The Magnificently Scatterbrained Bear | ADHD Children\'s Books',
+  title: 'Christebob - The Magnificently Scatterbrained Bear | HD Thinking Children\'s Stories',
   description:
-    'Meet Christebob, the magnificently scatterbrained teddy bear teaching kids that ADHD is a superpower. Picture book coming 2026, 52-episode animated series launching January 2026.',
-  keywords: ['ADHD', 'children\'s books', 'neurodiversity', 'picture books', 'ADHD kids', 'animated series', 'ADHD awareness', 'special needs', 'learning differences', 'ADHD education', 'neurodivergent', 'ADHD parenting'],
+    'Meet Christebob, the magnificently scatterbrained teddy bear who shows kids their High Definition (HD) thinking is a competitive advantage. Picture book & 52-episode animated series launching January 2027.',
+  keywords: ['HD thinking', 'High Definition thinking', 'children\'s books', 'neurodiversity', 'picture books', 'neurodivergent kids', 'animated series', 'cognitive diversity', 'parallel processing', 'pattern recognition', 'creative minds', 'neurodivergent parenting'],
   authors: [{ name: 'Chris Coyne', url: 'https://www.christebob.com' }],
   creator: 'Chris Coyne',
   publisher: 'Christebob Creative LLC',
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Christebob - Celebrating ADHD as a Superpower',
-    description: 'Meet Christebob, the magnificently scatterbrained teddy bear who teaches kids that ADHD is a gift, not a problem. Picture book & 52-episode animated series.',
+    title: 'Christebob - Celebrating HD (High Definition) Thinking',
+    description: 'Meet Christebob, the magnificently scatterbrained teddy bear who teaches kids their HD thinking is perfectly designed for the AI age. Picture book & 52-episode animated series.',
     url: 'https://www.christebob.com',
     siteName: 'Christebob',
     images: [
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Christebob - Celebrating ADHD as a Superpower',
-    description: 'Meet Christebob, the magnificently scatterbrained teddy bear teaching kids that ADHD is a superpower.',
+    title: 'Christebob - Celebrating HD (High Definition) Thinking',
+    description: 'Meet Christebob, the magnificently scatterbrained teddy bear teaching kids their HD thinking is a competitive advantage.',
     images: ['/images/christebob-hero.jpg'],
     creator: '@ChristebobBear',
   },
